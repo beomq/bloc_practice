@@ -1,4 +1,4 @@
-import 'package:bloc_practice/src/getx/count_get_x_controller.dart';
+import 'package:bloc_practice/first_practice/src/getx/count_get_x_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 

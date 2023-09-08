@@ -1,9 +1,9 @@
-import 'package:bloc_practice/src/bloc/bloc_home.dart';
-import 'package:bloc_practice/src/bloc/count_bloc.dart';
-import 'package:bloc_practice/src/cubit/count_cubit.dart';
-import 'package:bloc_practice/src/cubit/cubit_home.dart';
-import 'package:bloc_practice/src/getx/count_get_x_controller.dart';
-import 'package:bloc_practice/src/getx/getx_home.dart';
+import 'package:bloc_practice/first_practice/src/bloc/bloc_home.dart';
+import 'package:bloc_practice/first_practice/src/bloc/count_bloc.dart';
+import 'package:bloc_practice/first_practice/src/cubit/count_cubit.dart';
+import 'package:bloc_practice/first_practice/src/cubit/cubit_home.dart';
+import 'package:bloc_practice/first_practice/src/getx/count_get_x_controller.dart';
+import 'package:bloc_practice/first_practice/src/getx/getx_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
@@ -43,7 +43,7 @@ class App extends StatelessWidget {
                   Get.to(
                       BlocProvider(
                         create: (context) => CountBloc(),
-                        child: BlocHome(),
+                        child: const BlocHome(),
                       ),
                       duration: Duration.zero);
                 },

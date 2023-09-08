@@ -1,5 +1,9 @@
-import 'package:bloc_practice/src/app.dart';
+import 'package:bloc_practice/second_practice/src/app.dart';
+import 'package:bloc_practice/second_practice/src/bloc/movie_bloc.dart';
+import 'package:bloc_practice/second_practice/src/cubit/movie_cubit.dart';
+import 'package:bloc_practice/second_practice/src/repository/movie_repository.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -18,7 +22,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const App(),
+      home: RepositoryProvider(
+          create: (context) => MovieRepository(),
+          child: BlocProvider(
+              create: (context) => MovieBloc(context.read<MovieRepository>()),
+              child: App())),
     );
   }
 }
